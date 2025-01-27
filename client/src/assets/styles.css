@@ -1,0 +1,314 @@
+/* Custom Styles for Alex Medicare Website */
+
+/* General Styling */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #007bff;
+}
+
+/* Spacing Utilities */
+.mt-5 {
+  margin-top: 3rem;
+}
+
+/* Navbar */
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #0056b3;
+}
+
+.nav-link {
+  color: #343a40;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  margin-right: 15px;
+  border-radius: 5px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-color: #e9ecef;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.footer h5 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer p, .footer li {
+  font-size: 0.875rem;
+}
+
+.footer-logo {
+  max-width: 150px;
+}
+
+.footer .social-icons a, 
+.footer-last a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover, 
+.footer-last a:hover {
+  color: #007bff;
+}
+
+.footer-heading {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+}
+
+/* Text Colors */
+.text-primary {
+  color: #007bff !important;
+}
+
+.text-success {
+  color: #28a745 !important;
+}
+
+.text-warning {
+  color: #ffc107 !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+/* Images */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Column Hover Effect */
+.column-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.column-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+}
+
+.column-hover:hover .text-primary {
+  color: #0056b3;
+}
+
+.column-hover:hover .text-success {
+  color: #218838;
+}
+
+.column-hover:hover .text-warning {
+  color: #e0a800;
+}
+
+/* Buttons */
+button, .btn-primary, .btn-success, .back-btn, .view-products-btn {
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover, 
+.btn-primary:hover, 
+.btn-success:hover, 
+.back-btn:hover, 
+.view-products-btn:hover {
+  filter: brightness(1.1);
+}
+
+.back-btn {
+  background: #6c757d;
+  border: none;
+}
+
+.back-btn:hover {
+  background: #5a6268;
+}
+
+.btn-light {
+  color: #007bff;
+  background: #fff;
+  border-color: #fff;
+}
+
+.btn-light:hover {
+  color: #fff;
+  background: #007bff;
+}
+
+/* Cards */
+.category-card, .product-card {
+  background: linear-gradient(135deg, #fff, #f7f9fa);
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover, .product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Product Info */
+.category-title, .product-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Section Styling */
+.about-welcome, .about-mission, .about-values, .about-goal, .about-cta {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-welcome .btn-primary,
+.about-cta .btn-success {
+  padding: 10px 30px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.about-welcome .btn-primary:hover {
+  background: #0056b3;
+}
+
+.about-cta .btn-success:hover {
+  background: #1e7e34;
+}
+
+.core-values-list {
+  list-style: none;
+  padding: 0;
+}
+
+.core-values-list li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding: 12px;
+  background: #fff;
+  border-left: 4px solid #007bff;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.core-values-list li:hover {
+  transform: translateX(5px);
+  background: #e3f2fd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .lead, .core-values-list li, .category-title, .product-title {
+    font-size: 1rem;
+  }
+
+  .product-image {
+    height: 150px;
+  }
+
+  .about-welcome .btn-primary,
+  .about-cta .btn-success {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
