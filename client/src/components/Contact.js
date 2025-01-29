@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col, Image, Card, Toast, ToastContainer } from 'react-bootstrap';
 import logo from '../assets/images/Alex-medicare logo.png';
-import '../assets/styles.css';
 
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -13,7 +12,7 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
     // Send the form data to the backend API
     fetch('http://localhost:5000/api/send-email', {
@@ -36,6 +35,7 @@ function Contact() {
         }
       })
       .catch((error) => {
+
         setToast({
           show: true,
           message: `Error: ${error.message}`,
@@ -45,7 +45,7 @@ function Contact() {
   };
 
   return (
-    <Container className="my-5 contact-container">
+    <Container className="my-5">
       <ToastContainer className="p-3" position="top-end">
         <Toast
           show={toast.show}
@@ -62,15 +62,15 @@ function Contact() {
       <Row className="align-items-center">
 
         {/* Left Column - Contact Info */}
-        <Col md={6} className="contact-info">
-          <div className="text-center">
-            <Image src={logo} alt="Alex Medicare Logo" fluid className="logo" />
+        <Col md={6}>
+          <div className='text-center'>
+            <Image src={logo} alt="Alex Medicare Logo" fluid style={{ maxWidth: '120px' }} />
             <h1 className="text-primary mt-3">Alex Medicare</h1>
-            <p className="text-muted tagline">
-              Embracing Wellness, Caring for Life
+            <p className="text-muted">
+              Embracing Welnness, Caring for Life
             </p>
           </div>
-          <Card className="bg-light p-4 shadow-sm contact-card">
+          <Card className="bg-light p-4 shadow-sm">
             <Card.Body>
               <h4 className="text-primary">Contact Information</h4>
               <p className="text-muted">
@@ -95,8 +95,8 @@ function Contact() {
         </Col>
 
         {/* Right Column - Contact Form */}
-        <Col md={6} className="contact-form">
-          <Card className="shadow-lg p-4 form-card">
+        <Col md={6}>
+          <Card className="shadow-lg p-4">
             <Card.Body>
               <h4 className="text-primary text-center mb-4">Send Us a Message</h4>
               <Form onSubmit={handleSubmit}>
@@ -109,7 +109,7 @@ function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="p-2 input-field"
+                    className="p-2"
                   />
                 </Form.Group>
 
@@ -122,7 +122,7 @@ function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="p-2 input-field"
+                    className="p-2"
                   />
                 </Form.Group>
 
@@ -136,12 +136,12 @@ function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="p-2 input-field"
+                    className="p-2"
                   />
                 </Form.Group>
 
                 <div className="text-center">
-                  <Button type="submit" variant="primary" size="lg" className="submit-button">
+                  <Button type="submit" variant="primary" size="lg">
                     Send Message
                   </Button>
                 </div>

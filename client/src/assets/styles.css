@@ -140,7 +140,7 @@ footer {
 
 /* Images */
 .img-fluid {
-  max-width: 22%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -310,90 +310,5 @@ button:hover,
   .about-cta .btn-success {
     font-size: 0.9rem;
     padding: 8px 20px;
-  }
-}
-
-/* General Styling */
-.contact-container {
-  padding: 50px 0;
-}
-
-/* Logo Animation */
-.logo {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* Contact Info Card */
-.contact-card {
-  border: none;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Form Card */
-.form-card {
-  border: none;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #f9f9f9, #ffffff);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Input Fields */
-.input-field {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.input-field:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
-}
-
-/* Submit Button */
-.submit-button {
-  background-color: #007bff;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 30px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.submit-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-3px);
-}
-
-/* Tagline Styling */
-.tagline {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #6c757d;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact-info, .contact-form {
-    margin-bottom: 30px;
   }
 }
