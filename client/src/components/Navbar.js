@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Nav, Navbar as BootstrapNavbar, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import '../assets/styles.css'; 
-
+import { Link, useLocation } from 'react-router-dom';
+import '../assets/styles.css';
 
 function Navbar() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <BootstrapNavbar bg="light" expand="lg">
+    <BootstrapNavbar bg="light" expand="lg" style={{ position: 'sticky', top: '0', width: '100%', zIndex: '1000' }}>
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/" className="navbar-brand">
           Alex Medicare

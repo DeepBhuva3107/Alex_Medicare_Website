@@ -6,7 +6,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 function Header() {
   return (
     <>
-      <Navbar style={{ backgroundColor: '#ededed', color: '#ffffff', margin: '0' }}>
+      <Navbar style={{ backgroundColor: '#ededed', color: '#ffffff', margin: '0', padding: '4', position: 'fixed', top: '0', width: '100%', zIndex: '1000' }}>
         <Container className="d-flex justify-content-between align-items-center">
           <Navbar.Brand className="fs-6 m-0">
             welcome to Alex Medicare
@@ -19,6 +19,7 @@ function Header() {
           </div>
         </Container>
       </Navbar>
+      <div style={{ height: '60px' }}></div> {/* Spacer to prevent content overlap */}
     </>
   );
 }
