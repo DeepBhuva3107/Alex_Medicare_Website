@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Header from './components/Header';
+// import Header from './components/Header';
 import AboutUs from './components/AboutUs';
 import Infrastructure from './components/Infrastructure';
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        {/* <Header /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

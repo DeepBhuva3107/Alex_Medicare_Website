@@ -3,73 +3,84 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWarehouse, faTruck, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 import '../assets/styles.css';
+import { motion } from "framer-motion";
 
 const Infrastructure = () => {
   return (
     <Container className="mt-5">
+      
       {/* Header Section */}
-      <Row className="align-items-center text-center bg-gradient p-5 rounded shadow-lg">
-  <Col>
-    <h1 className="display-4 text-primary">Our Infrastructure</h1>
-    <p className="text-dark lead">
-      Enabling seamless operations for efficient surgical supplies distribution.
-    </p>
-  </Col>
-</Row>
+      <Row className="d-flex justify-content-center align-items-center text-center p-5 rounded shadow-lg" style={{ background: "linear-gradient(135deg, #2E3192, #1BFFFF)" }}>
+        <Col>
+          <h1 className="display-3 fw-bold text-white text-uppercase">Infrastructure</h1>
+          {/* <p className="text-light fs-5">
+            Powering seamless operations with cutting-edge facilities for efficient surgical supply distribution.
+          </p> */}
+        </Col>
+      </Row>
 
       {/* Description Section */}
-      <Row className="mt-5 p-4 bg-light rounded shadow-sm">
-        <Col md={6} className="text-center d-flex align-items-center justify-content-center">
-          <img
-            src="/images/infrastructure.jpg"
-            alt="Infrastructure Overview"
-            className="img-fluid rounded"
-            style={{ maxHeight: '300px', objectFit: 'cover' }}
-          />
+      <Row className="mt-5 p-5 bg-white rounded shadow-lg d-flex align-items-center">
+        <Col md={6} className="text-center">
+          <div className="position-relative">
+            <img
+              src="/images/infrastructure.jpg"
+              alt="Infrastructure Overview"
+              className="img-fluid rounded shadow"
+              style={{ maxHeight: '350px', objectFit: 'cover', borderRadius: '15px' }}
+            />
+            <div className="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25 rounded"></div>
+          </div>
         </Col>
         <Col md={6} className="d-flex align-items-center">
           <div>
-            <h2 className="mb-4 text-primary">Streamlined Operations</h2>
-            <p>
-              At Alex Medicare, we are committed to excellence in every aspect of our operations. 
-              With dedicated departments for inventory, quality checks, and logistics, we ensure that 
-              surgical supplies are delivered promptly and efficiently to hospitals, clinics, and retailers.
+            <h2 className="mb-3 fw-bold" style={{ color: "#0d6efd" }}>Optimized Supply Chain</h2>
+            <p className="text-muted lead">
+              At <span className="fw-bold text-dark">Alex Medicare</span>, our advanced infrastructure ensures seamless inventory
+              management, rigorous quality control, and fast, reliable distribution of surgical supplies
+              to hospitals, clinics, and retailers.
             </p>
           </div>
         </Col>
       </Row>
 
       {/* Highlights Section */}
-      <Row className="mt-5">
+      <Row className="mt-5 g-4">
         <Col md={4}>
-          <Card className="text-center shadow-sm h-100">
-            <Card.Body>
-              <FontAwesomeIcon icon={faWarehouse} size="3x" className="text-primary mb-3" />
-              <Card.Title className="fw-bold">Advanced Warehousing</Card.Title>
-              <Card.Text>
-                Spacious facilities with controlled environments to ensure product quality and safety.
+          <Card className="text-center shadow-lg border-0 h-100">
+            <Card.Body className="p-4">
+              <div className="d-flex justify-content-center align-items-center mb-3 bg-primary rounded-circle p-3" style={{ width: "80px", height: "80px" }}>
+                <FontAwesomeIcon icon={faWarehouse} size="2x" className="text-white" />
+              </div>
+              <Card.Title className="fw-bold text-primary">Advanced Warehousing</Card.Title>
+              <Card.Text className="text-muted">
+                Spacious, climate-controlled storage ensuring product integrity and safety.
               </Card.Text>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className="text-center shadow-sm h-100">
-            <Card.Body>
-              <FontAwesomeIcon icon={faTruck} size="3x" className="text-success mb-3" />
-              <Card.Title className="fw-bold">Efficient Logistics</Card.Title>
-              <Card.Text>
-                A robust supply chain ensuring timely deliveries across regions, no matter the volume.
+          <Card className="text-center shadow-lg border-0 h-100">
+            <Card.Body className="p-4">
+              <div className="d-flex justify-content-center align-items-center mb-3 bg-success rounded-circle p-3" style={{ width: "80px", height: "80px" }}>
+                <FontAwesomeIcon icon={faTruck} size="2x" className="text-white" />
+              </div>
+              <Card.Title className="fw-bold text-success">Efficient Logistics</Card.Title>
+              <Card.Text className="text-muted">
+                A streamlined supply chain ensuring on-time deliveries, every time.
               </Card.Text>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className="text-center shadow-sm h-100">
-            <Card.Body>
-              <FontAwesomeIcon icon={faShieldAlt} size="3x" className="text-danger mb-3" />
-              <Card.Title className="fw-bold">Quality Assurance</Card.Title>
-              <Card.Text>
-                Rigorous quality control processes to deliver surgical supplies that meet global standards.
+          <Card className="text-center shadow-lg border-0 h-100">
+            <Card.Body className="p-4">
+              <div className="d-flex justify-content-center align-items-center mb-3 bg-danger rounded-circle p-3" style={{ width: "80px", height: "80px" }}>
+                <FontAwesomeIcon icon={faShieldAlt} size="2x" className="text-white" />
+              </div>
+              <Card.Title className="fw-bold text-danger">Quality Assurance</Card.Title>
+              <Card.Text className="text-muted">
+                Stringent quality control to deliver products meeting global standards.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -77,17 +88,58 @@ const Infrastructure = () => {
       </Row>
 
       {/* Call-to-Action Section */}
-      <Row className="mt-5 bg-gradient text-white p-5 rounded shadow-lg">
-        <Col className="text-center">
-          <h2 className="display-5">Partner with Alex Medicare</h2>
-          <p className="lead" style={{ color: 'black' }}>
-            Experience unmatched service, reliability, and product quality. Let us be your trusted wholesale partner for surgical supplies.
-          </p>
-          <Button href="/contact" variant="light" size="lg" className="text-primary fw-bold shadow">
-            Contact Us Today
-          </Button>
-        </Col>
-      </Row>
+      <motion.div
+        className="mt-5 p-5 text-center rounded shadow-lg"
+        style={{ background: "linear-gradient(135deg, #0077b6, #00b4d8)" }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <motion.h2
+              className="display-4 fw-bold text-white mb-3"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Partner with <span className="text-warning">Alex Medicare</span>
+            </motion.h2>
+
+            <motion.p
+              className="lead text-light px-lg-5 mx-lg-5"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Elevate your business with <strong>reliable</strong>, <strong>high-quality</strong> surgical supplies.
+              Experience <strong>unmatched service</strong> and a <strong>trusted partnership</strong> with us.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Button
+                href="/contact"
+                variant="warning"
+                size="lg"
+                className="fw-bold px-4 py-2 shadow-lg mt-3"
+                style={{
+                  borderRadius: "30px",
+                  letterSpacing: "1px",
+                  transition: "0.3s ease-in-out"
+                }}
+                onMouseOver={(e) => e.target.style.transform = "scale(1.05)"}
+                onMouseOut={(e) => e.target.style.transform = "scale(1)"}
+              >
+                Contact Us Today
+              </Button>
+            </motion.div>
+          </Col>
+        </Row>
+      </motion.div>
     </Container>
   );
 };
