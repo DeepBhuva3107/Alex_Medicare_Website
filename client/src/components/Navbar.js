@@ -5,20 +5,19 @@ import '../assets/styles.css';
 
 function Navbar() {
   const location = useLocation();
-  const [expanded, setExpanded] = useState(false); // Track Navbar state
+  const [expanded, setExpanded] = useState(false); 
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  // Function to close Navbar after clicking a link
   const handleNavClick = () => setExpanded(false);
 
   return (
     <BootstrapNavbar 
       expand="lg" 
       className="custom-navbar"
-      expanded={expanded} // Control state of Navbar
+      expanded={expanded} 
     >
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/" className="custom-brand">
@@ -27,7 +26,7 @@ function Navbar() {
         <BootstrapNavbar.Toggle 
           aria-controls="basic-navbar-nav" 
           className="custom-toggler" 
-          onClick={() => setExpanded(expanded ? false : true)} // Toggle Navbar
+          onClick={() => setExpanded(expanded ? false : true)} 
         />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import "../assets/styles.css"; 
-import categories from "../data/CategoriesData";
+import "../assets/styles.css";
+import categories from '../data/CategoriesData';
+import getImagePath from "../utils/imageHelper";  
 
 function Products() {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [isHovered, setIsHovered] = useState(false); 
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Container className="my-4 products-container">
@@ -34,30 +35,25 @@ function Products() {
             variant="outline-secondary"
             onClick={() => setSelectedCategory(null)}
             className="mb-4 back-btn"
-            onMouseEnter={() => setIsHovered(true)}  
-            onMouseLeave={() => setIsHovered(false)} 
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
-            {isHovered ? "← Back to Categories" : selectedCategory.name} 
+            {isHovered ? "← Back to Categories" : selectedCategory.name}
           </Button>
           <Row className="justify-content-center">
             {selectedCategory.products.map((product) => (
               <Col key={product.id} md={4} sm={6} xs={12} className="mb-4">
                 <Card className="product-card h-100">
                   <div className="product-img-container">
-                    <Card.Img
-                      variant="top"
-                      src={`/assets/images/${product.image}`}
-                      alt={product.name}
-                      className="product-image"
-                    />
+                  <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  style={{ width: '150px', height: '150px', objectFit: 'cover' }} 
+                />
                   </div>
                   <Card.Body className="text-center">
-                    <Card.Title className="product-title">
-                      {product.name}
-                    </Card.Title>
-                    <Card.Text className="product-description">
-                      {product.description}
-                    </Card.Text>
+                    <Card.Title className="product-title">{product.name}</Card.Title>
+                    <Card.Text className="product-description">{product.description}</Card.Text>
                     <Button variant="success" className="mt-2 learn-more-btn">
                       Learn More
                     </Button>
